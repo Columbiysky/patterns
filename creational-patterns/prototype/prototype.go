@@ -13,11 +13,11 @@ type Object struct {
 }
 
 func (o *Object) clone() *Object {
-	return &Object{prop: o.prop}
+	return &Object{prop: o.prop + "_cloned"}
 }
 
 func main() {
-	initObj := &Object{prop: "copy"}
+	initObj := &Object{prop: "prop"}
 	copyObj := initObj.clone()
 
 	fmt.Println(initObj.prop)
